@@ -1,0 +1,26 @@
+{
+    "name": "Backend API OBRAS",
+    "description": "Backend API OBRAS",
+    "authors": [
+        {
+            "name": "Adrian Lopez Alvez",
+            "email": "proyectos@adrianlopezalvez.com"
+        }
+    ],
+    "require": {
+        "silex/silex": "~1.3",
+        "cnam/security-jwt-service-provider": "1.*",
+        "monolog/monolog": "^1.18",
+        "doctrine/dbal": "^2.5",
+        "nesbot/carbon": "^1.21",
+        "setasign/fpdi-tcpdf": "1.*",
+        "swiftmailer/swiftmailer": "^5.4",
+        "twig/twig": "^1.24"
+    },
+    "autoload": {
+		"psr-0": {
+			"Api": "app/",
+            "PHPExcel": "vendor/Classes/"
+		}
+	}
+}

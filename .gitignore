@@ -1,0 +1,3 @@
+storage/logs/*.log
+cgi-bin/
+.vscode

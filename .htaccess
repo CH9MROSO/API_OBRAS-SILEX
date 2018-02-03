@@ -1,0 +1,17 @@
+Header set Access-Control-Allow-Origin "*" 
+Header set Access-Control-Allow-Methods: "PUT, GET, POST, DELETE, OPTIONS"
+Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+<IfModule mod_rewrite.c>
+    Options -MultiViews
+    
+    RewriteEngine On
+    RewriteBase /web
+
+    RewriteCond %{HTTP:Authorization} ^(.+)$
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [QSA,L]
+
+    RewriteRule ^(storage/*) [F]
+</IfModule>
